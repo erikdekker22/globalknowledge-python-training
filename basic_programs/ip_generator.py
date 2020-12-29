@@ -3,10 +3,10 @@ import sys
 def ask_number(minimum=0, max_tries=3):
     count = 0
     ip_address_amount = int(input("Please specify a value above the minimum (0)."))
-    while ip_address_amount <= 0:
+    while (ip_address_amount <= 0) or (ip_address_amount > 255):
         if count < 3:
             print(count)
-            print("Im sorry but this value is too small. \n")
+            print("Im sorry but this value is too small. Or above 255 \n")
             ip_start_value = int(input("Please specify again a value above the minimum (0)."))
             count += 1
         else:
@@ -14,7 +14,6 @@ def ask_number(minimum=0, max_tries=3):
             return 0
     else:
         return ip_address_amount
-
 
 def generate_ip_addresses(ip_amount, start_octet, end_octet, base="192.168.178"):
     if ip_amount == 0:
@@ -27,11 +26,6 @@ def generate_ip_addresses(ip_amount, start_octet, end_octet, base="192.168.178")
             else:
                 print("I\'m sorry, but there are not enough IP addresses.")
                 break
-
-    '''implementeer
-       sanitize eventueel start en end
-       print de adressen 192.168.178.start t/m 192.168.178.end
-    '''
 
 def main():
     print("Hoeveel ip-adressen moeten er worden gemaakt?")
