@@ -4,7 +4,7 @@ import requests
 
 ## Example kenteken: 93JGJB
 
-def ask_kenteken():
+def ask_kenteken(): # -->
     kenteken = input("Please specify the kenteken you want to research: ")
     return kenteken
 
