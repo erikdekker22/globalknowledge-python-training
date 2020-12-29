@@ -5,7 +5,6 @@ def ask_number(minimum=0, max_tries=3):
     ip_address_amount = int(input("Please specify a value above the minimum (0)."))
     while (ip_address_amount <= 0) or (ip_address_amount > 255):
         if count < 3:
-            print(count)
             print("Im sorry but this value is too small. Or above 255 \n")
             ip_start_value = int(input("Please specify again a value above the minimum (0)."))
             count += 1
