@@ -1,6 +1,6 @@
 import netmiko, os, csv
 
-def execute_command():
+def connect_host():
 
     with open('devices.csv', 'r') as txt_devices:
         devices = csv.DictReader(txt_devices, delimiter=',')
@@ -12,7 +12,7 @@ def execute_command():
                               password=device['password'],
                               port=device['port'],
                               secret=device['secret'])
-            get_information(device['host'],net_connect)
+            execute_commands(device['host'],net_connect)
 
 
 def write_to_file(filename, result):
@@ -20,23 +20,23 @@ def write_to_file(filename, result):
     with open(filename, 'w+') as router_name_file:
         router_name_file.write(result)
 
-def get_information(hostname,net_connect):
+def execute_commands(hostname,net_connect):
     with open ("commands.txt", 'r') as commands:
         for command in commands:
             if not os.path.exists:
                 os.mkdir(os.path.join("C:/Users/Routzer/Documents/net_python/projects/globalknowledge-python-training/data", hostname))
                 filename = os.path.join("C:/Users/Routzer/Documents/net_python/projects/globalknowledge-python-training/data", hostname, command.rstrip() + '.txt')
-                print(filename)
+                print('Created the following: ' + filename)
                 output = net_connect.send_command(command)
                 write_to_file(filename, output)
             else:
                 filename = os.path.join("C:/Users/Routzer/Documents/net_python/projects/globalknowledge-python-training/data", hostname, command.rstrip() + '.txt')
-                print(filename)
+                print('Created the following: ' + filename)
                 output = net_connect.send_command(command)
                 write_to_file(filename, output)
 
 def main():
-    execute_command()
+    connect_host()
 
 if __name__ == "__main__":
     main()

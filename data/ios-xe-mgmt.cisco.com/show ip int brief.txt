@@ -3,8 +3,3 @@ GigabitEthernet1       10.10.20.48     YES NVRAM  up                    up
 GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
 GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
 Loopback10             10.10.10.1      YES other  up                    up      
-Loopback1230           1.2.3.0         YES other  up                    up      
-Loopback1231           1.2.3.1         YES other  up                    up      
-Loopback1232           1.2.3.2         YES other  up                    up      
-Loopback1233           1.2.3.3         YES other  up                    up      
-Loopback1234           1.2.3.4         YES other  up                    up      

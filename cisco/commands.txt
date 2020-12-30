@@ -1,2 +1,4 @@
 show arp
 show ip int brief
+show run
+show ver
