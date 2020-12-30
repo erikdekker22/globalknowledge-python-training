@@ -22,6 +22,8 @@ def main():
 
     if response.status_code == 200:  # successfull response
         print("HTTP status code is: " + str(response.status_code))  # json string
+        print("The Content-Type of the HTTP response was: " + str(response.headers['Content-Type']))
+
         data = json.loads(response.text)  # convert to python dict with loads.
         print('You asked for information about kenteken ' + data[0]["kenteken"])
         print('The color of this car is: ' + data[0]["eerste_kleur"])
