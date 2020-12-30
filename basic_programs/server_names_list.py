@@ -4,7 +4,7 @@ def add_some(servers):
     return servers
 
 def get_five_letter_servers(servers):
-    five_letter_names = []  # fixture
+    five_letter_names = []
     for server in servers:
         if len(server) == 5:
             five_letter_names.append(server)
