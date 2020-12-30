@@ -1,0 +1,4 @@
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.10.20.48             -   0050.56bb.e14e  ARPA   GigabitEthernet1
+Internet  10.10.20.253            3   0896.ad9e.444c  ARPA   GigabitEthernet1
+Internet  10.10.20.254          165   0008.e3ff.fd90  ARPA   GigabitEthernet1
