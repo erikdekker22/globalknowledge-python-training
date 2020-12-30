@@ -20,7 +20,7 @@ def main():
     url = construct_url()
     response = http_get(url)
 
-    if response.status_code == 200:  # successfull response
+    if response.status_code == 200:  # successful response
         print("HTTP status code is: " + str(response.status_code))  # json string
         print("The Content-Type of the HTTP response was: " + str(response.headers['Content-Type']))
 
