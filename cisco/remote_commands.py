@@ -1,6 +1,7 @@
 import netmiko, os
 
 def execute_command(command):
+    # Below is not ideal, but for testing purposes fine.
     net_connect = netmiko.ConnectHandler(
                       device_type='cisco_ios',
                       host='ios-xe-mgmt.cisco.com',
