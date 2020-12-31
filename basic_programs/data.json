@@ -1,1 +1,5 @@
-{"google.nl": "8.8.8.8", "cloudflare.com": "1.1.1.1", "broadcast.com": "255.255.255.255"}
+{
+    "broadcast.com": "255.255.255.255",
+    "cloudflare.com": "1.1.1.1",
+    "google.nl": "8.8.8.8"
+}

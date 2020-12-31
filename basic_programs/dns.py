@@ -43,7 +43,7 @@ def add_to_dns(dns,hostname, ip):
 
 def save_to_json(dictionary):
     with open('data.json', 'w') as fp:
-        json.dump(dictionary, fp)
+        json.dump(dictionary, fp, indent=4, sort_keys=True)
 
 def read_json_file():
     with open ('data.json', 'r') as fp:
